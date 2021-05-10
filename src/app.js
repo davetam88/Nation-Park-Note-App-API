@@ -1,3 +1,4 @@
+// 
 require('dotenv').config()
 const express = require('express')
 const morgan = require('morgan')
@@ -5,6 +6,9 @@ const cors = require('cors')
 const helmet = require('helmet')
 const { NODE_ENV } = require('./config')
 const app = express()
+const usersRouter = require('./users/users-router')
+const favparksRouter = require('./favparks/favparks-router')
+
 
 const morganOption = (NODE_ENV === 'production')
   ? 'tiny'
@@ -17,6 +21,9 @@ app.use(cors())
 app.get('/', (req, res) => {
   res.send('Hello, world!')
 })
+
+app.use('/users', usersRouter)
+app.use('/favparks', favparksRouter)
 
 app.use(function errorHandler(error, req, res, next) {
 
@@ -33,3 +40,6 @@ app.use(function errorHandler(error, req, res, next) {
 })
 
 module.exports = app
+
+
+
