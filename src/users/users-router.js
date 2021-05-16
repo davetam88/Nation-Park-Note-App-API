@@ -99,7 +99,6 @@ usersRouter
       })
       .catch(next)
   })
-
   .patch(jsonParser, (req, res, next) => {
     const { title, url } = req.body
     const userToUpdate = { title, url }
