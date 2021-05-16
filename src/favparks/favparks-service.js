@@ -5,7 +5,7 @@ const FavparkService = {
   },
 
   insertFavpark(db, data) {
-    return db('favpark')
+    return db('favparks')
       .insert(data)
       .returning('*')
       .then(rows => ({
@@ -14,7 +14,7 @@ const FavparkService = {
   },
 
   getById(db, id) {
-    return db('favpark')
+    return db('favparks')
       .select('*')
       .where({ id })
       .first();
@@ -22,13 +22,13 @@ const FavparkService = {
   // .first, select the first item found.
 
   deleteFavpark(db, id) {
-    return db('favpark')
+    return db('favparks')
       .where({ id })
       .delete();
   },
 
   updateFavpark(db, id, data) {
-    return db('favpark')
+    return db('favparks')
       .where({ id })
       .update(data);
   }

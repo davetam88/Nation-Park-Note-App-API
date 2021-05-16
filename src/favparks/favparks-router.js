@@ -4,7 +4,6 @@ const xss = require('xss')
 const logger = require('../logger')
 const FavparksService = require('./favparks-service')
 const { getFavparkValidationError } = require('./favparks-validator')
-
 const favparksRouter = express.Router()
 const jsonParser = express.json()
 
@@ -18,7 +17,6 @@ favparksRouter
       req.app.get('db')
     )
       .then(favparks => {
-        res.json(favparks.map(serializeFavpark))
         res.json(favparks)
       })
       .catch(next)
@@ -78,6 +76,7 @@ favparksRouter
       .catch(next)
   })
 
+
 // for / get with route id : get, delete and patch
 favparksRouter
   .route('/:favpark_id')
@@ -99,8 +98,9 @@ favparksRouter
       .catch(next)
   })
   .get((req, res, next) => {
-    res.json(serializeFavpark(res.favpark))
+    res.json(res.favpark)
   })
+
   .delete((req, res, next) => {
     FavparksService.deleteFavpark(
       req.app.get('db'),
