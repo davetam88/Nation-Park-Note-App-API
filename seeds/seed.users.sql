@@ -1,6 +1,4 @@
 INSERT INTO
-  users (username, password)
+  users (userid, username, password)
 VALUES
-  ('user1', '11'),
-  ('user2', '22'),
-  ('Demo', 'dd');
+  (4, '44', '44');

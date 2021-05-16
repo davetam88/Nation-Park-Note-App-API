@@ -12,29 +12,7 @@ INSERT INTO
     )
 VALUES
     (
-        1,
-        'acad',
-        'ME',
-        'Acadia National Park',
-        1,
-        'note for park 1',
-        'Maine',
-        'Arts and Culture',
-        1
-    ),
-    (
-        1,
-        'bicr',
-        'AL',
-        'Birmingham Civil Rights National Monument',
-        2,
-        'note for Birmingham Civil Rights National Monument park',
-        'Alabama',
-        'Biking',
-        2
-    ),
-    (
-        3,
+        4,
         'alca',
         'CA',
         'Alcatraz Island',
@@ -45,7 +23,7 @@ VALUES
         1
     ),
     (
-        3,
+        4,
         'goga',
         'CA',
         'Golden Gate National Recreation Area',
@@ -56,7 +34,7 @@ VALUES
         2
     ),
     (
-        3,
+        4,
         'frri',
         'AL',
         'Freedom Riders National Monument',

@@ -1,4 +1,3 @@
-// 
 require('dotenv').config()
 const express = require('express')
 const morgan = require('morgan')
@@ -23,7 +22,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/users', usersRouter)
-app.use('/favparks', favparksRouter)
+// app.use('/favparks', favparksRouter)
 
 app.use(function errorHandler(error, req, res, next) {
 
