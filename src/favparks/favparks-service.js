@@ -1,6 +1,6 @@
 const FavparkService = {
   getAllFavparks(db) {
-    return db('favparkful_favparks')
+    return db('favparks')
       .select('*');
   },
 

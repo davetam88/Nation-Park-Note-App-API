@@ -26,6 +26,7 @@ usersRouter
       .catch(next)
   })
 
+  // ccc 1
   .post(jsonParser, (req, res, next) => {
     const { userid, username, password } = req.body
     const newUser = { userid, username, password }
@@ -42,6 +43,7 @@ usersRouter
 
     // newUser.modified = modified;
 
+    // ccc 2 --
     UsersService.insertUser(
       req.app.get('db'),
       newUser
@@ -79,6 +81,7 @@ usersRouter
       .catch(next)
   })
 
+  // cc3 - 
   .get((req, res, next) => {
     res.json({
       id: res.user.id,
@@ -99,6 +102,7 @@ usersRouter
       })
       .catch(next)
   })
+
   .patch(jsonParser, (req, res, next) => {
     const { title, url } = req.body
     const userToUpdate = { title, url }

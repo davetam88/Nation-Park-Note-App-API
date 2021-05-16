@@ -8,18 +8,6 @@ const { getFavparkValidationError } = require('./favparks-validator')
 const favparksRouter = express.Router()
 const jsonParser = express.json()
 
-const serializeFavpark = favpark => ({
-  id: favpark.id,
-  userid: Number(userid),
-  parkCode: xss(parkCode),
-  stateCode: xss(stateCode),
-  parkName: xss(parkName),
-  rating: Number(rating),
-  note: xss(note),
-  stateName: xss(stateName),
-  activity: xss(activity),
-  parkNumber: Number(parkNumber),
-})
 
 // for / get and post 
 favparksRouter
@@ -31,6 +19,7 @@ favparksRouter
     )
       .then(favparks => {
         res.json(favparks.map(serializeFavpark))
+        res.json(favparks)
       })
       .catch(next)
   })
