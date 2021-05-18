@@ -8,11 +8,36 @@ INSERT INTO
         note,
         stateName,
         activity,
-        parkNumber
+        parkNumber,
+        parkData
     )
 VALUES
     (
-        4,
+        1,
+        'acad',
+        'ME',
+        'Acadia National Park',
+        1,
+        'note for park 1',
+        'Maine',
+        'Arts and Culture',
+        1,
+        ''
+    ),
+    (
+        1,
+        'bicr',
+        'AL',
+        'Birmingham Civil Rights National Monument',
+        2,
+        'note for Birmingham Civil Rights National Monument park',
+        'Alabama',
+        'Biking',
+        2,
+        ''
+    ),
+    (
+        2,
         'alca',
         'CA',
         'Alcatraz Island',
@@ -20,10 +45,11 @@ VALUES
         'Note for Alcatraz Island Park',
         'California',
         'Food',
-        1
+        1,
+        ''
     ),
     (
-        4,
+        2,
         'goga',
         'CA',
         'Golden Gate National Recreation Area',
@@ -31,10 +57,11 @@ VALUES
         'Note for Golden Gate National Recreation Area Park',
         'California',
         'Picnicking',
-        2
+        2,
+        ''
     ),
     (
-        4,
+        2,
         'frri',
         'AL',
         'Freedom Riders National Monument',
@@ -42,5 +69,6 @@ VALUES
         'Note for Freedom Riders National Monument',
         'Alabama',
         'Guided Tours',
-        3
+        3,
+        ''
     );

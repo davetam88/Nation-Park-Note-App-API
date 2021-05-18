@@ -32,7 +32,8 @@ favparksRouter
       note,
       stateName,
       activity,
-      parkNumber
+      parkNumber,
+      parkData
     } = req.body
 
     // required fields

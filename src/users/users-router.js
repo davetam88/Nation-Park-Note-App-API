@@ -26,10 +26,9 @@ usersRouter
       .catch(next)
   })
 
-  // ccc 1
   .post(jsonParser, (req, res, next) => {
-    const { userid, username, password } = req.body
-    const newUser = { userid, username, password }
+    const { username, password } = req.body
+    const newUser = { username, password }
 
     // check for required fields
     for (const [key, value] of Object.entries(newUser))
@@ -43,7 +42,6 @@ usersRouter
 
     // newUser.modified = modified;
 
-    // ccc 2 --
     UsersService.insertUser(
       req.app.get('db'),
       newUser
@@ -81,14 +79,11 @@ usersRouter
       .catch(next)
   })
 
-  // cc3 - 
   .get((req, res, next) => {
     res.json({
       id: res.user.id,
-      title: xss(res.user.title), // sanitize title
-      url: xss(res.user.url), // sanitize url
-      description: xss(res.user.description), // sanitize description
-      rating: res.user.rating,
+      username: xss(res.user.username), // sanitize username
+      password: xss(res.user.password), // sanitize password
     })
   })
 
