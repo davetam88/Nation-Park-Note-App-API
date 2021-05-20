@@ -8,11 +8,31 @@ const favparksRouter = express.Router()
 const jsonParser = express.json()
 
 
+
+favparksRouter
+  .route('/favparks-userid/:userid')
+  .get((req, res, next) => {
+    FavparksService.getFavparkByUserid(
+      req.app.get('db'),
+      req.params.userid
+    )
+      .then(favparks => {
+        if (!favparks)
+        {
+          return res.status(404).json({
+            error: { message: `Favpark doesn't exist` }
+          })
+        }
+        res.json(favparks)
+      })
+      .catch(next)
+  })
+
+
 // for / get and post 
 favparksRouter
   .route('/')
   .get((req, res, next) => {
-
     FavparksService.getAllFavparks(
       req.app.get('db')
     )
@@ -25,28 +45,28 @@ favparksRouter
   .post(jsonParser, (req, res, next) => {
     const {
       userid,
-      parkCode,
-      stateCode,
-      parkName,
+      parkcode,
+      statecode,
+      parkname,
       rating,
       note,
-      stateName,
+      statename,
       activity,
-      parkNumber,
-      parkData
+      parknum,
+      parkdata
     } = req.body
 
     // required fields
     const newFavpark = {
       userid,
-      parkCode,
-      // stateCode,
-      // parkName,
+      parkcode,
+      // statecode,
+      // parkname,
       // rating,
       // note,
-      // stateName,
+      // statename,
       // activity,
-      parkNumber
+      parknum
     }
 
     // check for required fields
@@ -78,7 +98,7 @@ favparksRouter
   })
 
 
-// for / get with route id : get, delete and patch
+// for get, delete and patch with favpark id 
 favparksRouter
   .route('/:favpark_id')
   .all((req, res, next) => {
@@ -125,6 +145,7 @@ favparksRouter
         }
       })
     }
+
     // const error = getFavparkValidationError(favparkToUpdate)
     // if (error) return res.status(400).send(error)
 
@@ -138,7 +159,6 @@ favparksRouter
       })
       .catch(next)
   })
-
 
 module.exports = favparksRouter
 

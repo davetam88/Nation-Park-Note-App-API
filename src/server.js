@@ -12,6 +12,16 @@ const db = knex({
 // can set a property called 'db' and set the Knex instance as the value.
 app.set('db', db)
 
+// function searchByName(searchTerm) {
+//   db
+//     .select('*')
+//     .from('shopping_list')
+//     .where('name', 'ILIKE', `%${searchTerm}%`)
+//     .then(result => {
+//       console.log('SEARCH TERM', { searchTerm })
+//       console.log(result)
+//     })
+// }
 
 
 app.listen(PORT, () => {

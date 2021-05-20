@@ -2,4 +2,4 @@ INSERT INTO
   users (username, password)
 VALUES
   ('user1', '11'),
-  ('demo', 'dd');
+  ('Demo', 'dd');

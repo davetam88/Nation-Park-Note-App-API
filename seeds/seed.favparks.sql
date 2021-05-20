@@ -1,15 +1,15 @@
 INSERT INTO
     favparks (
         userid,
-        parkCode,
-        stateCode,
-        parkName,
+        parkcode,
+        statecode,
+        parkname,
         rating,
         note,
-        stateName,
+        statename,
         activity,
-        parkNumber,
-        parkData
+	parknum,
+	parkdata
     )
 VALUES
     (

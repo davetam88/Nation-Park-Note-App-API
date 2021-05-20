@@ -1,4 +1,11 @@
 const FavparkService = {
+
+  getFavparkByUserid(db, userid) {
+    return db('favparks')
+      .select('*').from('favparks')
+      .where('userid', userid)
+  },
+
   getAllFavparks(db) {
     return db('favparks')
       .select('*');
@@ -12,6 +19,7 @@ const FavparkService = {
         ...data, id: rows[0].id
       }))
   },
+
 
   getById(db, id) {
     return db('favparks')
@@ -31,7 +39,7 @@ const FavparkService = {
     return db('favparks')
       .where({ id })
       .update(data);
-  }
+  },
 };
 
 module.exports = FavparkService;
