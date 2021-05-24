@@ -11,6 +11,3 @@ CREATE TABLE favparks (
   parknum NUMERIC,
   parkdata TEXT
 );
-
--- 1 to 100 are in mem records
--- ALTER SEQUENCE favparks_id_seq  RESTART 101;

@@ -4,4 +4,3 @@ CREATE TABLE users (
   password VARCHAR(50) NOT NULL
 );
 
--- ALTER SEQUENCE users_id_seq  RESTART 101;

@@ -60,17 +60,24 @@ favparksRouter
     const newFavpark = {
       userid,
       parkcode,
-      // statecode,
-      // parkname,
-      // rating,
-      // note,
-      // statename,
-      // activity,
+      statecode,
+      parkname,
+      rating,
+      note,
+      statename,
+      activity,
       parknum
     }
 
+    // required fields
+    const favparkReq = {
+      userid,
+      parkcode,
+      rating,
+    }
+
     // check for required fields
-    for (const [key, value] of Object.entries(newFavpark))
+    for (const [key, value] of Object.entries(favparkReq))
     {
       if (value == null)
       {

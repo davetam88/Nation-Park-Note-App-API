@@ -1,5 +1,2 @@
-INSERT INTO
-  users (username, password)
-VALUES
-  ('user1', '11'),
-  ('Demo', 'dd');
+('user1', 'xvhu1'),
+('Demo', 'ghpr');

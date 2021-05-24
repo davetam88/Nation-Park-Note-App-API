@@ -10,7 +10,7 @@ function getFavparkValidationError({ url, rating }) {
     logger.error(`Invalid rating '${rating}' supplied`)
     return {
       error: {
-        message: `'rating' must be a number between 0 and 5`
+        message: `'rating' must be a number between 1 and 5`
       }
     }
   }
