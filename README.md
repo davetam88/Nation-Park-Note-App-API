@@ -1,38 +1,61 @@
-# Nation-Park-Note-App-API
+# National Park Note APP - Database Version - Server/API
 
-This is a boilerplate project used for starting new projects!
 
-## Set up
+# Project Summary:
 
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
+This project converts the data store for <b>National Park Note APP</b> [Memory Store Version](https://github.com/davetam88/National-Park-Note-App) into a set of API endpoints with PostgreSQL as the database engine. These endpoints were used extensively by the  <b>National Park Note APP - Client</b> [Database Version](https://github.com/davetam88/Nation-Park-Note-App-Client). This API endpoint server is then deployed and hosted by [Heroku](https://heroku.com).
 
-1. Clone this repository to your local machine 
-   git clone BOILERPLATE-URL NEW-PROJECTS-NAME
-2. `cd` into the cloned repository
-3. Make a fresh start of the git history for this project with 
-   rm -rf .git && git init
-4. Install the node dependencies 
-   npm install
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server 
-   mv example.env .env
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
+# Project Links
+- [GitHub Code Link - Database Version - Server](https://github.com/davetam88/Nation-Park-Note-App-Server)
 
-## Scripts
+- [GitHub Code Link - Database Version - Client](https://github.com/davetam88/Nation-Park-Note-App-Client)
 
-Start the application 
-  npm start
+- [GitHub Code Link - Memory Store Version](https://github.com/davetam88/National-Park-Note-App)
 
-Start nodemon for the application 
-  npm run dev
+- [Live Demo Link - Vercel](https://national-park-note-app-client.vercel.app/)
 
-Run the tests 
-  npm test
 
-## Deploying
 
-When your new project is ready for deployment, add a new Heroku application with 
-  heroku create
-This will make a new git remote called "heroku" and you can then 
-  npm run deploy
-which will push to this remote's main branch.
+# Supported Endpoints:
+    ENDPOINTS                 | FUNCTION
+    --------------------------|----------------------------------------------------------
+    GET /users                | read all the user information in the database
+    GET /users/id             | Read a single user record indexed by the user id.
+    GET /favparks             | Read all the favparks stored in the database
+    GET /favparks/id          | Read a single favpark record indexed by the favpark id.
+    DELETE /users/id          | Delete a single user record indexed by the user id.
+    DELETE /favparks/id       | Delete a single favpark record indexed by the favpark id.
+    POST /user                | Create a new user record
+    POST /favpark             | Create a new favpark record
+
+
+
+
+## >> Technologies used in this APP:
+```
+* Heroku 
+* Express framework - for building Node web APIs.
+* PostgreSQL database
+* morgan - HTTP request logger.
+* Express middleware
+* API tokens
+* CORS - an Express middleware, it simplifies the configuration of CORS in Express.
+* Helmet
+* Supertest library - 
+
+-> Javascript: ES6
+
+-> Tools
+* Postman
+* VSC Debugger
+* nodemon 
+* NPM
+* Dbeaver
+* morgan loggging tool
+```
+
+## Author
+
+* David Tam - Full Stack Developer
+* Contact - <davetam88@gmail.com> 
 
