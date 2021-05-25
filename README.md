@@ -29,6 +29,9 @@ This project converts the data store for <b>National Park Note APP</b> [Memory S
     POST /favpark             | Create a new favpark record
 
 
+# Api's Screenshot:
+
+![Favpark Router Code Snippet](images/router-code-screen-shot.jpg)
 
 
 ## >> Technologies used in this APP:
