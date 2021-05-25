@@ -3,7 +3,9 @@
 
 # Project Summary:
 
-This project converts the data store for <b>National Park Note APP</b> [Memory Store Version](https://github.com/davetam88/National-Park-Note-App) into a set of API endpoints with PostgreSQL as the database engine. These endpoints were used extensively by the  <b>National Park Note APP - Client</b> [Database Version](https://github.com/davetam88/Nation-Park-Note-App-Client). This API endpoint server is then deployed and hosted by [Heroku](https://heroku.com).
+This project converts the data store for <b>National Park Note APP</b> [Memory Store Version](https://github.com/davetam88/National-Park-Note-App) into a set of API endpoints with PostgreSQL as the database engine. These endpoints were used extensively by the  <b>National Park Note APP - Client</b> [Database Version](https://github.com/davetam88/Nation-Park-Note-App-Client), an online version of this client app hosted by [Vercel](https://vercel.com) can be launch [here](https://national-park-note-app-client.vercel.app/). This API endpoint server was deployed onliine and is hosted by [Heroku](https://heroku.com).
+
+
 
 # Project Links
 - [GitHub Code Link - Database Version - Server](https://github.com/davetam88/Nation-Park-Note-App-Server)
