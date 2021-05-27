@@ -3,7 +3,9 @@
 
 # Project Summary:
 
-This <b>Capstone Project</b> project converts the data store for <b>National Park Note APP</b> [Memory Store Version](https://github.com/davetam88/National-Park-Note-App) into a set of API endpoints with PostgreSQL as the database engine. These endpoints were used extensively by the  <b>National Park Note APP - Client</b> [Database Version](https://github.com/davetam88/Nation-Park-Note-App-Client), an online version of this client app hosted by [Vercel](https://vercel.com) can be launch [here](https://national-park-note-app-client.vercel.app/). This API endpoint server was deployed onliine and is hosted by [Heroku](https://heroku.com).
+This <b>Capstone Project</b> replaces the data store used by <b>National Park Note APP</b> [Memory Store Version](https://github.com/davetam88/National-Park-Note-App) with a set of API endpoints with PostgreSQL as the database engine. These endpoints were used extensively by the  <b>National Park Note APP - Client</b> [Database Version](https://github.com/davetam88/Nation-Park-Note-App-Client), an online version of this client app hosted by [Vercel](https://vercel.com) can be launch [here](https://national-park-note-app-client.vercel.app/). This API endpoint server was deployed online and is hosted by [Heroku](https://heroku.com).
+
+
 
 
 # Project Links
@@ -50,8 +52,7 @@ This <b>Capstone Project</b> project converts the data store for <b>National Par
 * CORS - an Express middleware, it simplifies the configuration of CORS in Express.
 * Helmet
 * Supertest library - 
-
--> Javascript: ES6
+* Javascript: ES6
 
 -> Tools
 * Postman
